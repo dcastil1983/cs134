@@ -68,7 +68,7 @@ void Player::update()
 }
 
 
-
+//Lets you move the object in the scene
 void getKeyPress(unsigned char key, int x, int y)
 {
 
@@ -98,6 +98,7 @@ void getKeyPress(unsigned char key, int x, int y)
     }
 }
 
+//Code taken from lab to render a ball in the scene
 double addXR(Circle2D c)
 {
     double x;
@@ -165,14 +166,16 @@ void GLInit(int* argc, char** argv)
 
 int main(int argc, char** argv)
 {
+    //Check ot make sure enough arguments are passed
     if(argc != 2)
     {
         cout << "Not enough arguments!" << endl;
         exit(0);
     }
 
-
+    //Creates a filestream object
     ifstream myFile;
+    //Doubles to hold the points in the scene
     double x1;
     double y1;
     double x2;
